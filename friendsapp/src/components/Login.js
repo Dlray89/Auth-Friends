@@ -1,8 +1,7 @@
 import React from "react";
-import { axiosWithAuth } from "../utils/axiosWithAuth";
 import { Link } from "react-router-dom";
-
-export default class Login extends React.Component {
+import { axiosWithAuth } from "../utils/axiosWithAuth";
+class Login extends React.Component {
   state = {
     credentials: {
       username: "",
@@ -24,24 +23,26 @@ export default class Login extends React.Component {
     axiosWithAuth()
       .post("/api/login", this.state.credentials)
       .then(res => {
-        window.localStorage.getItem("token", res.data.payload);
+        window.localStorage.setItem("token", res.data.payload);
+        
         this.props.history.push("./protected");
       })
       .catch(error => console.log(error));
   };
+
+
   render() {
     return (
       <div>
         <div>
           <button>
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
           </button>
           <button>
             <Link to="/login">Login</Link>
           </button>
         </div>
         <form onSubmit={this.login}>
-          <label htmlFor="username" />
           <input
             type="text"
             name="username"
@@ -54,9 +55,12 @@ export default class Login extends React.Component {
             value={this.state.credentials.password}
             onChange={this.handleChange}
           />
-          <button>Login</button>
+          <button
+          >Login</button>
         </form>
       </div>
     );
   }
 }
+
+export default Login;

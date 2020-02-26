@@ -1,20 +1,23 @@
 import React from 'react';
 import './App.css';
 import { Switch, Route } from "react-router-dom"
-import Home from "./components/home";
+import Home from "./components/Home";
 import Login from "./components/Login";
 import PrivateRoute from './components/PrivateRoute';
-import FriendList from "./components/friendsList";
+import FriendList from "./components/FriendsList";
+import WelcomePage from "./components/WelcomePage";
 function App() {
   return (
-    <div className="App">
+    <>
 
 <Switch>
-<Route path="/" component={Home} />
+<Route exact path="/" component={WelcomePage} />
 <Route path="/login" component={Login} />
-<PrivateRoute exact path="./protected" component={FriendList} />
+<Route path="/home" component={Home} />
+<Route exact path="/protected" component={FriendList} />
+<PrivateRoute exact path="/protected" />
 </Switch>
-    </div>
+    </>
   );
 }
 
