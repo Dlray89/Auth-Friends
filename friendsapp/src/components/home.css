@@ -1,0 +1,48 @@
+.btnBox{
+    background: linear-gradient(to bottom, #005aa7, #fffde4);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3%;
+   
+}
+
+.Intro{
+    background: linear-gradient(to top, #ece9e6, #ffffff);}
+
+h1{
+    text-align: center;
+}
+
+.introP{
+    text-align: center;
+}
+
+.PicContainer{
+    display: flex;
+justify-content: space-evenly;
+   
+}
+
+.Pic1{
+    width: 300px;
+    border-radius: 40px;
+
+}
+
+.Pic2{
+    width: 300px;
+    border-radius: 40px;
+
+}
+
+.Pic3{
+    width: 300px;
+    border-radius: 40px;
+
+}
+
+.Pic4{
+    width: 300px;
+    border-radius: 40px;
+
+}
