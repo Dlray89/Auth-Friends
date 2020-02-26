@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 
 export default class FriendsList extends React.Component {
@@ -18,17 +18,17 @@ export default class FriendsList extends React.Component {
             console.log(res)
         })
         .catch( error => console.log(error))
+    };
 
+formatData = () => {
+    const formatData = [];
+    console.log(this.state.friends)
+}
 
-    }
     render(){
         return(
             <div>
-                {friends.map(friend => {
-                    <div key={friend.id}>
-                        <p>{friend.name}</p>
-                    </div>
-                })}
+           friends dashboard
             </div>
         )
     }

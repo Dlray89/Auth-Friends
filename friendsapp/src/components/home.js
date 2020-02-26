@@ -6,13 +6,13 @@ function Home(){
         <div className="Contianer">
             <button><Link to='/' >Home</Link></button>
             <button><Link to='/login' >Login</Link></button>
+            <button><Link to='/protected' >DashBoard</Link></button>
        
         <div className="Intro">
             <p>
                 Welcome to your friends page
             </p>
         </div>
-
         
         </div>
     )

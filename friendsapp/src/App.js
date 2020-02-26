@@ -4,15 +4,15 @@ import { Switch, Route } from "react-router-dom"
 import Home from "./components/home";
 import Login from "./components/Login";
 import PrivateRoute from './components/PrivateRoute';
-
+import FriendList from "./components/friendsList";
 function App() {
   return (
     <div className="App">
 
 <Switch>
-<Route path="/login" component={Login} />
 <Route path="/" component={Home} />
-<PrivateRoute exact path="./protected" />
+<Route path="/login" component={Login} />
+<PrivateRoute exact path="./protected" component={FriendList} />
 </Switch>
     </div>
   );
