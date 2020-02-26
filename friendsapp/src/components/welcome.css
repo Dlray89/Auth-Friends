@@ -3,7 +3,7 @@ img{
     width: 100%;
 }
 .navLinks{
-    border: solid 2px #2980b9;
+    border-top: solid 2px #ffffff;
     display: flex;
     justify-content: space-evenly;
     padding: 3%;

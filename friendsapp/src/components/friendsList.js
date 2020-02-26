@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import Auth from "../utils/auth";
+import auth from "../utils/auth";
 
 
 class FriendsList extends React.Component {
@@ -34,7 +36,10 @@ class FriendsList extends React.Component {
         <button>
           <Link to="/home">Home</Link>
         </button>
-        <button>logout</button>
+        <button onClick={() => {
+          auth.logout(() => {
+            this.props.history.push('/home')
+          })}}>logout</button>
 
         <h1>Welcome to your dashboard</h1>
         <div>
