@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
-import Auth from "../utils/auth";
 import auth from "../utils/auth";
+import FriendForm from "./Friendsform";
 
 
 class FriendsList extends React.Component {
@@ -48,7 +48,9 @@ class FriendsList extends React.Component {
             Age: {friend.age} <br />
             Email: {friend.email}</p>
           ))}
+          
         </div>
+        <FriendForm />
       </div>
     );
   }
